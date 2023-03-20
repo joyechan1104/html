@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3장 이미지와 링크 조예찬</title>
+</head>
+<body>
+    <h1>이미지 삽입</h1>
+    <img src="muffin1.png" alt="머핀 이미지"> <!--대소문자 구분 중요-->
+
+    <hr>
+        <!--width는 100픽셀 이란뜻이다. 가로세로둘중하나만 적으면 똑같이 줄어든다
+                                    둘다 적으면 그에맞게 비율이 변한다.-->
+    <img src="images/cover.jpg" alt="커버 이미지" width="100" height="50">
+
+    <hr>
+            <!--이미지 주소 복사 붙여넣기-->
+    <img src = "https://www.silla.ac.kr/ko/_Img/vis_cpslife_1_1574305036.png" width="300">
+
+    <hr>
+
+    <!--이미지, 표에 캡션 달기-->
+    <figure>
+        <img src ="images/gugudan.jpg" width="300">
+        <figurecaption>구구단을 외우자!</figurecaption>
+    </figure>
+
+    <hr>
+
+    <h1>하이퍼링크</h1> <!--https:// 가 반듯시 들어가야 한다-->
+    <a href="https://www.silla.ac.kr/ko/">신라대학교(현재브라우저)</a> <!-- = _self-->
+    <br><br>
+    <a href="https://www.silla.ac.kr/ko/" target="_blank">신라대학교(새 브라우저)</a>
+    <br><br>
+    <a href="https://computer.silla.ac.kr/computer2016/index.php?pCode=greeting" 
+    target="_blank"><img src="images/vis_intro_1_1590639182.jpg"></a>
+    <br><br>
+</body>
+</html>
