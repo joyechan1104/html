@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표만들기 - 조예찬</title><!--td=칸, 표그리기(tavle) 줄(tr) 칸(td)-->
+</head>
+<body>
+    <h1>2줄 3칸 기본 표만들기</h1>
+    <table border="1" width="50%"><!--보더: 테두리굵기, 위드: 가로길이(브라우저 사이즈기준) %를 적어야 사이즈변함-->
+        <caption> <!--제목붙이는 방법 01. 캡션붙이기 테이블아래에-->
+            <strong>기본테이블입니다.</strong>
+            <br>
+            2줄 3칸 짜리 표 입니다.
+        </caption>
+        <!--1번줄-->
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <!--2번줄-->
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h1>표에 제목 셀 만들기</h1>
+    <figure> <!--제목붙이는 방법 02. 피규어붙이기 테이블위에-->
+        <figurecaption>
+            표에 제목 셀 만들기 입니다.
+        </figurecaption>
+    </figure>
+    <table border="1" width="50%">
+        <tr>
+            <th>학과</th><!--th는 글자가 굵어지고 가운데정렬이 된다-->
+            <td>국제관계학과</td>
+        </tr>
+        <tr>
+            <th>학번</th>
+            <td>201809109</td>
+        </tr>
+        <tr>
+            <th>이름</th>
+            <td>조예찬</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h1>셀 합치기 - 3줄 4칸 표</h1>
+    <table border="1" width="50%">
+        <tr><!--가로 1,2,3번을 하나의 칸으로 /제일 왼쪽의칸 의외의 칸은 전부다 삭제해준다-->
+            <td colspan="3">123</td>
+            <td rowspan="3">4<br>8<br>12</td>
+        </tr>
+        <tr><!--세로 5,9번을 하나의 칸으로 /젤위의 칸이 아래쪽을 흡수하기에 아래쪽은 다 삭제한다-->
+            <td rowspan="2">5<br>9</td>
+            <td>6</td>
+            <td>7</td>
+
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>2023년 1학기 시간표</h2>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1교시</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td rowspan="2">C#프로그래밍</td>
+            </tr>
+            <tr>
+                <th>2교시</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>3교시</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>4교시</th>
+                <td></td>
+                <td rowspan="2">해외인턴과 취업</td>
+                <td>해외인턴과 취업</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>5교시</th>
+                <td rowspan="2">C#프로그래밍</td>
+                <td></td>
+                <td></td>
+                <td rowspan="2">웹제작</td>
+            </tr>
+            <tr>
+                <th>6교시</th>
+                <td></td>
+                <td rowspan="3">푸드데코레이션</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>7교시</th>
+                <td rowspan="2">웹제작</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>8교시</th>
+                <td></td>
+                <td>진로지도7</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>9교시</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">1교시는 9시 30분부터 시작입니다.</td>
+            </tr>
+        </tfoot>
+         
+    </table>
+    
+</body>
+</html>
