@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--디자인만드는 방법
+1. div span
+2. css(다운받고 폴더안에 새로운css폴더를 만들어서 저장한다.)
+3. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/style.css">
+<!-- 링크// #css 이걸선택해야함 /는 이폴더/안에있는이파일 이라는뜻-->
+
+    <title>조예찬 프로필</title>
+</head>
+<body>
+    <!--프로필 전체영역 /div는 아래쪽으로 가게 -->
+    <div id="container">
+        <!--사이드 영역-->
+        <aside>
+            <div id="namecard">
+                <img src="images/joyechan_photo.jpg" width="100%">
+                <h1>jo ye chan</h1>
+                <p>수면부족</p>
+            </div>
+            <div id="detail">
+                <p>신라대학교 국제관계학과</p>
+                <p>joyechan1104@icloud.com</p>
+            </div>
+            <div id="sns">
+                <h2>SNS</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/joyechan1104/html" target="_blank">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/yechanni1104/" target="_blank">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!--프로필 메인 영역 /주석은 주로 코드위, 코드오른쪽에 붙인다.-->
+        <div id="main">
+            <section> <!--자기소개-->
+                <h1 class="subtitle">who am i?</h1>
+                <p>신라대학교 국제관계학과 조예찬 입니다.<br>
+                    저의 mbti는 <b>istj</b>입니다.<br>
+                    저는 사진을 찍는걸 좋아합니다.<br>
+                    저는 벌레를 싫어합니다.<br>
+                    웹제작 수업을 듣기로 한 이유는 <mark>코딩을 배워보고 싶어서</mark> 신청하게 되었습니다.<br>
+                    수업이 끝날떄 쯤에는 웹페이지를 만들 수 있게 되고싶습니다.<br>
+                    수업을 열심히 해주시는 교수님 감사합니다.<br>
+                </p>
+            </section> 
+
+            <section> <!--장단점-->
+                <h1 class="subtitle">personality</h1>
+                <ul>
+                    <li>장점
+                        <ul>
+                            <li>나는 다양한걸 배우는 걸 좋아한다.</li>
+                            <li>한번 관심을 가지는 일이 있으면 더욱더 알고싶어진다.</li>
+                            <li>활동적인 일을 좋아한다.</li>
+                        </ul>
+                        </li>
+                    <li>단점
+                        <ul>
+                            <li>낯가림이 심한편이다.</li>
+                            <li>길을 잘 잃는다.</li>
+                            <li>처음배우는 일은 어려워하는 편이다.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section> <!--경력-->
+                <h1 class="subtitle">Experience</h1>
+                <ul>
+                    <li>2018년 7월 국제개발협력 인도네시아 봉사</li>
+                    <li>2019년 1월 어학연수 중국 영남직업기술대학교</li>
+                    <li>2019년 4월 ~ 2020년 2월 교환학생 일본 니혼대학 법학부</li>
+                    <li>2021년 7월 ~ 2023년 1월 53사단 19해안감시기동대대 군복무</li>
+                </ul>
+            </section>
+
+            <section> <!--학력-->
+                <h1 class="subtitle">Education</h1>
+                <table border="1" width="100%">
+                    <caption>학력사항😍</caption><!--이모지 ctrl+command+space-->
+                    <thead>
+                        <tr>
+                            <th>출신학교</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>신라대학교</td>
+                            <td>국제관계학과</td>
+                            <td>2018.03.01~현재</td>
+                            <td>재학중</td>
+                        </tr>
+                        <tr>
+                            <td>구미사곡고등학교</td>
+                            <td></td>
+                            <td>2015.03.01~2018.02.28</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>광평중학교</td>
+                            <td></td>
+                            <td>2012.03.01~2015,02.28</td>
+                            <td>졸업</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+
+</body>
+</html>
