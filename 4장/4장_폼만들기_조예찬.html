@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>4장 폼만들기 - 조예찬</title>
+    </head>
+    <body>
+        <h1>사용자 입력을 위한 폼</h1>
+        <form name="myForm" method="get" action="result.html"><!--두개의 단어를 합칠 때는 두번째 단어를 대문자로 써야한다./ 메소드:전달방식/액션:행동을취함-->
+            <fieldset>
+                <legend>필수 입력</legend><!--type, name, id는 필수다/ name과 id는 화면에 안 나타난다/ auto는 자동커서-->
+                [이름] : <input type="text" name="user_name" id="user_name" placeholder="이름을 입력하세요" autofocus required=""><!--141p-->
+                <br><br>
+                <label for="user_pwd">[비밀번호] : </label><!--글자를 안보이게하기위해 password를 입력/ 레이블(136p)의 for과 id를 동일하게 해줘야한다/ 최대길이=12-->
+                <input type="password" name="user_pwd" id="user_pwd" maxlength="12">
+            </fieldset>
+
+
+            <br><br>
+            <input type="submit" value="전송">
+            <input type="reset" value="다시입력">
+        </form>
+    </body>
+</html>
