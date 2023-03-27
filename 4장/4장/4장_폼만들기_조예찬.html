@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>4장 폼만들기 - 조예찬</title>
+    </head>
+    <body>
+        <h1>사용자 입력을 위한 폼</h1> <!--get 대신 post를 쓰면 주소에 유저네임 패스워드 그레이드가 안나온다.-->
+        <form name="myForm" method="get" action="result.html"><!--두개의 단어를 합칠 때는 두번째 단어를 대문자로 써야한다./ 메소드:전달방식/액션:행동을취함-->
+            <fieldset>
+                <legend>필수 입력</legend><!--type, name, id는 필수다/ name과 id는 화면에 안 나타난다/ auto는 자동커서-->
+                [이름] : <input type="text" name="user_name" id="user_name" placeholder="이름을 입력하세요" autofocus required=""><!--141p-->
+                <br><br>
+                <label for="user_pwd">[비밀번호] : </label><!--글자를 안보이게하기위해 password를 입력/ 레이블(136p)의 for과 id를 동일하게 해줘야한다/ 최대길이=12-->
+                <input type="password" name="user_pwd" id="user_pwd" maxlength="12">
+            </fieldset>
+            
+            <fieldset>
+                <legend>선택입력</legend><!--radio 하나만 선택 / check box 다중 선택-->
+                [학년] :
+                <input type="radio" name="grade" id="grade1" value="1학년"> 1학년 <!--grade 그룹명(똑같이)/ id는 다르게/ value 값-->
+                <input type="radio" name="grade" id="grade2" value="2학년"> 2학년
+                <input type="radio" name="grade" id="grade3" value="3학년"> 
+                <label for="grade3">3학년</label> <!--label을 넣어야 글자선택시 체크가된다-->
+                <input type="radio" name="grade" id="grade4" value="4학년"> 
+                <label for="grade3">4학년</label> 
+
+                <br><br>
+
+                [신청 과목] :   <!--check box는 각각의 네임을 선택해야 하므로 네임이 다 달라야한다. 137p-->
+                <!--방법1-->
+                <input type="checkbox" name="ck_c" id="ck_c" value="C_Programing">
+                <label for="ck_c">C언어</label>
+                <input type="checkbox" name="ck_Python" id="ck_Python" value="Python">
+                <label for="ck_Python">파이썬</label>
+
+                <!--방법2-->
+                <label>
+                    <input type="checkbox" name="ck_web" id="ck_web" value="WebProgram"> 웹제작
+                </label>
+                <label>
+                    <input type="checkbox" name="ck_sw" id="ck_sw" value="SWPrograming"> S/W프로그래밍
+                </label>
+
+
+                <br><br>
+
+                <label for="grade">[학년] :</label> <!--170p-->
+                <select name="grade" id="grade"> <!--셀렉트는 나열할 항목이 많을 때-->
+                    <option value="1">1학년</option> <!--value 전송값/ 화면에 보이는값-->
+                    <option value="2">2학년</option>
+                    <option value="3">3학년</option>
+                    <option value="4" selected>4학년</option> <!--selected 는 기본을 4학년으로 만든다.-->
+                </select>
+            </fieldset>
+
+
+            <br><br>
+
+            <fieldset>
+                <legend>분화된 텍스트 필드</legend> <!--146p-->
+                <label for="user_search">[검색] :</label>
+                <input type="search" name="user_search" id="user_search"> <!--input type search 버전은 x표시가 생긴다-->
+                <br><br>
+
+                <label for="user_url">홈페이지 주소</label>
+                <input type="url" name="user_url" id="user_url"> <!--url만 쓰면 모바일에서 . 과 / 가 들어있는 키보드가 나온다-->
+                <br><br>
+
+                <label for="user_mail">E-Mail</label>
+                <input type="email" name="user_mail" id="user_mail"> <!-- 골뱅이등장-->
+                <br><br>
+                
+                <label for="user_tel">전화번호</label>
+                <input type="tel" name="user_tel" id="user_tel"> <!--전번키패드-->
+            </fieldset>
+
+            <fieldset>
+                <legend>기타</legend> <!--148p-->
+                <label for="user_num">주문 개수</label> <!--원래는 숫자만 입력되는데 왜 내맥은 글자가 들어가나??-->
+                <input type="number" name="user_num" id="user_num" min="1" max="190" value="1">
+                <br><br>
+
+                <label for="user_ran">진행단계</label>
+                하<input type="range" name="user_ran" id="user_ran" min="1" max="10" value="=1">상
+                <br><br>
+
+                <label for="user_date">제출일</label>
+                <input type="date" name="user_date" id="user_date">
+                <br><br>
+
+                <label for="user_time">제출시간</label>
+                <input type="time" name="user_time" id="user_time" value="09:00">
+                <br><br>
+
+                <label for="user_color">[선호 색상] : </label>
+                <input type="color" name="user_color" id="user_color">
+                <br><br>
+
+                <label for="user_info">[자기 소개] : </label> <!--174p-->
+                <textarea name="user_info" id="user_info" cols="50" rows="10"></textarea> 
+                <!--textarea에는 절대 띄어쓰기, enter키를 상요하지 않는다./ cols몇칸 쓸건지 rows몇줄로 보일건지-->
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+                <legend>버튼</legend>
+                <input type="=submit" value="전송">
+                <input type="=reset" value="다시입력">
+                <br><br>
+
+                <input type="button" value="컴퓨터공학부" onclick="javascript:window.open('https://computer.silla.ac.kr')"> 
+                <!--자바스크립트를 호출 윈도우창을 열어주세요 '는 주소를 안에 쓴다'-->
+                <br><br>
+
+                <input type="hidden" name="emailchk" value="N"> <!--히든은 주소에 나온다 문자수신 체크를 했냐안했냐 등에 사용한다.-->
+            </fieldset>
+
+
+            <br><br>
+            <input type="submit" value="전송">
+            <input type="reset" value="다시입력">
+        </form>
+    </body>
+</html>
