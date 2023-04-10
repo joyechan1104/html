@@ -1,0 +1,56 @@
+body {
+    /*background-color: red; 디자인 적용확인 젤 쉬운방법*/
+    font-family: "맑은 고딕", "고딕", "굴림"; /*맑은 고딕에 없을때 고딕체로 해주세요 고딕도 없으면 굴림으로 해주세요*/
+}
+/* commeand + / = 주석 */
+header {
+    background-color: yellowgreen;
+    width: 80%; /* 반드시 단위를 적어준다 브라우저 크기에 맞게 */
+    /* text-align: center; 글짜와 그림을 가운데 정렬 but 구역 ㄴㄴ */
+    margin-left: auto; /* margin : 상자를 기준으로 바깥쪽 여백, auto로 하면 가로로 기준으로 가운데 정렬을 시킨다 */
+    margin-right: auto; /**/
+    padding: 10px; /*안쪽여백을 글짜기준 상하좌우 10px로 지정하겠다/ 줄간격과도 영향을 미친다 */
+/*    padding-left: 30px; //기본은 4면 똑같이 방향을 지정하면 명시한대로 된다 
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding: 10px 30px 50px 100px;  // top right bottom left 순으로 지정된다 top을 기준 시계방향 
+*/
+    overflow: hidden; /*둥둥 떠다니는걸 맞춰준다*/
+}
+
+h1 {
+    font-size: 2em;
+    /* background-color: aquamarine; */
+    float: left;
+}
+
+/* header 의 자손인 h1 태그에 적용 // 부모 자식 // 조상 자손 */
+header h1 { /* 조상과 자손관계일 때 띄어쓰기를 한다 🤙 */
+    /* color: white; */
+    width: 40%; /*80퍼 안에서 40퍼를 차지하겠다*/
+}
+
+/* haeder의 자식인 nav에 태그 적용 */
+header > nav {
+    /* background-color: brown; */
+    width: 60%; /*80퍼 안에서 60퍼를 차지하겠다*/
+    float: right; /*둥둥떠있는 상태*/
+}
+
+nav ul {
+    list-style-type: none;   /* 점을 없앰*/
+}
+
+nav ul li {
+    /* background-color: orchid; */
+    display: inline; /*한줄로 정렬*/
+    float: left;
+    margin: 15px; /* li글자기준 바깥쪽 여백 */
+}
+
+/* nav a && nav ul li */
+a {
+    text-decoration: none; /*밑줄제거*/
+    color: white; /*글자색*/
+}
