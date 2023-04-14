@@ -1,0 +1,117 @@
+/*  */
+
+body {
+    /*background-color: red; 디자인 적용확인 젤 쉬운방법*/
+    font-family: "맑은 고딕", "고딕", "굴림"; /*맑은 고딕에 없을때 고딕체로 해주세요 고딕도 없으면 굴림으로 해주세요*/
+}
+/* commeand + / = 주석 */
+header {
+    background-color: yellowgreen;
+    width: 80%; /* 반드시 단위를 적어준다 브라우저 크기에 맞게 */
+    /* text-align: center; 글짜와 그림을 가운데 정렬 but 구역 ㄴㄴ */
+    margin-left: auto; /* margin : 상자를 기준으로 바깥쪽 여백, auto로 하면 가로로 기준으로 가운데 정렬을 시킨다 */
+    margin-right: auto; /**/
+    padding: 10px; /*안쪽여백을 글짜기준 상하좌우 10px로 지정하겠다/ 줄간격과도 영향을 미친다 */
+/*    padding-left: 30px; //기본은 4면 똑같이 방향을 지정하면 명시한대로 된다 
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding: 10px 30px 50px 100px;  // top right bottom left 순으로 지정된다 top을 기준 시계방향 
+*/
+    overflow: hidden; /*둥둥 떠다니는걸 맞춰준다*/
+}
+
+h1 {
+    font-size: 2em;
+    /* background-color: aquamarine; */
+    float: left;
+}
+
+/* header 의 자손인 h1 태그에 적용 // 부모 자식 // 조상 자손 */
+header h1 { /* 조상과 자손관계일 때 띄어쓰기를 한다 🤙 */
+    /* color: white; */
+    width: 40%; /*80퍼 안에서 40퍼를 차지하겠다*/
+}
+
+/* haeder의 자식인 nav에 태그 적용 */
+header > nav {
+    /* background-color: brown; */
+    width: 60%; /*80퍼 안에서 60퍼를 차지하겠다*/
+    float: right; /*둥둥떠있는 상태*/
+}
+
+nav ul {
+    list-style-type: none;   /* 점을 없앰*/
+}
+
+nav ul li {
+    /* background-color: orchid; */
+    display: inline; /*한줄로 정렬*/
+    float: left;
+    margin: 15px; /* li글자기준 바깥쪽 여백 */
+}
+
+/* nav a && nav ul li */
+a {
+    text-decoration: none; /*밑줄제거*/
+    color: white; /*글자색*/
+}
+
+section {
+    width: 80%; /* 영역크기지정 */
+    margin-left: auto;
+    margin-right: auto; /* 영역 가운데 정렬 */
+    border: 5px solid #333; /* 보더 : 테두리의 두께 / 솔리드(실선) : 테두리의 종류 */
+    /* border-width: ;
+    border-style: ;
+    border-color: ; */
+    padding: 5px;
+}
+
+/* 제목은 통일해 주는 편이 좋다 */
+h2 {
+    font-size: 1.8em;
+    padding: 15px;
+    border-radius: 3px; /* 테두리가 있어야 효과가 나타난다 */
+    box-shadow: -3px 3px 3px 0px rgb(198, 198, 198); /* 그림자 박스 312p 313p/
+    X좌표 , Y좌표 사각형의 x,y축 좌표는 좌측상단이 0,0자리다 -는 좌x상y, +는우x하y / 3번째는 흐림정도 4번째는 번짐정도*/
+}
+
+h3 {
+    font-size: 1.3em;
+    padding: 15px 0px 15px 10px;
+    border-left: solid pink 8px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 30px; /* 줄간격 */
+    margin: 20px;
+}
+
+dl {
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+dt {
+    font-size: 1.1em;
+    font-weight: bold; /* 글자체 */
+    color: aqua;
+}
+
+article ul {
+    line-height: 30px;
+}
+
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkorchid;
+    width: 80%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
