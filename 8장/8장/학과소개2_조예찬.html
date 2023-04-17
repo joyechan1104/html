@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="layout.css"> <!--외부파일 가져오기-->
 
-    <style> /* layout.css는 전체영역이기에 따로할려면 헤드안에 스타일을 만들어야한다 */
+    <style> /* layout.css는 전체영역이기에 따로할려면 헤드안에 스타일을 만들어야한다 // 시험문제 내부스타일 외부스타일 구분 중요! */
         article {
             /* background-color: aqua; */
             width: 95%;
@@ -39,6 +39,28 @@
             color: red;
             font-weight: bold;
         }
+
+        table {
+            width: 90%; /* 섹션영역 100%중의 90%를 사용 */
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid black; /* 사각형 영역만 선이 만들어진다 */
+            /*border-spacing: 15px; *//* 테두리 간격 */
+            border-collapse: collapse; /* 간격제거 */
+        }
+
+        td, th { /* 쉼표는 그룹해주겠다 (똑같아) */
+            border: 1px solid gray;
+            padding: 10px; /* 상자안이 잘 보이게 : padding */
+        }
+
+        th {
+            background-color: rgb(187, 207, 207);
+        }
+
+        tbody th {
+            vertical-align: top;
+        }
     </style>
 
 </head>
@@ -53,12 +75,14 @@
                 <li><a href="#com2">컴퓨터공학전공</a></li>
                 <li><a href="#com3">메타버스전공</a></li>
                 <li><a href="#com4">교육 목표</a></li>
+                <li><a href="#com5">주요 교과목</a></li>
             </ul>
         </nav>
     </header>
 
     <!--학부 소개 메인 영역-->
     <section>
+
         <!--학부 소개 컨텐츠 영역-->
         <article id="com1"> <!--바로가기 책깔피 위해 id를 지정 / 내부스타일 작업 필-->
             <h2>학부 소개</h2>
@@ -96,7 +120,6 @@
         </article>
 
         <!--메타버스전공 소개 컨텐츠 영역-->
-
         <article id="com3">
             <h2>메타버스전공</h2>
             <h3>소개</h3>
@@ -119,7 +142,6 @@
         </article>
 
         <!--교육 목표 소개 컨텐츠 영역-->
-
         <article id="com4">
             <h2>교육 목표</h2> <!--리스트를 만드세요!!-->
             <p>
@@ -134,6 +156,97 @@
                     </ol>
                 </ul>
             </p>
+
+        </article>
+
+        <!--주요 교과목 콘텐츠 영역-->
+        <article id="com5">
+            <h2>주요 교과목</h2>
+            <table> <!--보더를 써야 표가 보인다-->
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>컴퓨터공학전공</th>
+                        <th>메타버스전공</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--주요 교과목 줄-->
+                    <tr>
+                        <th>주요 교과목</th>
+                        <td>
+                            데이터베이스<br>
+                            데이터베이스프로그래밍<br>
+                            모바일프로그래밍<br>
+                            웹프로그래밍<br>
+                            클라우드컴퓨팅이해<br>
+                            빅데이터분석<br>
+                            클라우드빅데이터응용<br>
+                            인공지능
+                        </td>
+                        <td>
+                            XR기술이해<br>
+                            VR엔진프로그래밍<br>
+                            게임학개론<br>
+                            2D/3D게임프로그래밍<br>
+                            메타버스플랫폼이해와응용<br>
+                            메티버스콘텐츠제작<br>
+                            정보보호와NFT<br>
+                            블록체인<br>
+                            게임인공지능응용
+                        </td>
+                    </tr>
+                    <!--관련 자격증 줄-->
+                    <tr>
+                        <th>관련 자격증</th>
+                        <td>
+                            정보처리기사<br>
+                            정보보안기사<br>
+                            빅데이터분석기사<br>
+                            데이터분석전문가<br>
+                            CCNA<br>
+                            CCNP<br>
+                            OCP<br>
+                            OCJP
+                        </td>
+                        <td>
+                            정보처리기사<br>
+                            유니티 인증 자격증<br>
+                            VR/AR 활용능력<br>
+                            게임그래픽전문가<br>
+                            게임프로그래밍전문가<br>
+                            멀티미디어 콘텐츠 제작전문가<br>
+                            블록체인 관리사(CBM)
+                        </td>
+                    </tr>
+                    <!--졸업후 진로 줄-->
+                    <tr>
+                        <th>졸업후 진로</th>
+                        <td>
+                            소프트웨어개발기업<br>
+                            공공기관<br>
+                            금용기관<br>
+                            빅데이터 분석 기업<br>
+                            클라우드 서비스 개발 기업<br>
+                            클라우드 플랫폼 개발 기업<br>
+                            시스템통합(SI) 기업<br>
+                            스마트폰 앱 개발 기업<br>
+                            정보보호 개발 및 운용기업 등
+                        </td>
+                        <td>
+                            가상세계 기획자 및 디자이너<br>
+                            메타버스 콘텐츠 제작자<br>
+                            메타버스 플랫폼 개발자<br>
+                            XR(VR/AR) 프로그래머<br>
+                            2D/3D 게임 개발자<br>
+                            블록체인 프로그래머<br>
+                            백엔드 서버프로그램 개발자<br>
+                            IT 프로그래머<br>
+                            데이터베이스 개발자 등
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
         </article>
         
