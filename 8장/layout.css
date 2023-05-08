@@ -1,3 +1,5 @@
+/*  */
+
 body {
     /*background-color: red; 디자인 적용확인 젤 쉬운방법*/
     font-family: "맑은 고딕", "고딕", "굴림"; /*맑은 고딕에 없을때 고딕체로 해주세요 고딕도 없으면 굴림으로 해주세요*/
@@ -22,13 +24,13 @@ header {
 h1 {
     font-size: 2em;
     /* background-color: aquamarine; */
-    float: left;
+    float: left; /*둥둥떠있는 상태*/
 }
 
 /* header 의 자손인 h1 태그에 적용 // 부모 자식 // 조상 자손 */
 header h1 { /* 조상과 자손관계일 때 띄어쓰기를 한다 🤙 */
     /* color: white; */
-    width: 40%; /*80퍼 안에서 40퍼를 차지하겠다*/
+    width: 40%; /*80퍼 안에서 40퍼를 차지하겠다 / 헤더의 위드스 80중에서 h1이 40퍼를 차지*/
 }
 
 /* haeder의 자식인 nav에 태그 적용 */
@@ -53,4 +55,63 @@ nav ul li {
 a {
     text-decoration: none; /*밑줄제거*/
     color: white; /*글자색*/
+}
+
+section {
+    width: 80%; /* 영역크기지정 */
+    margin-left: auto;
+    margin-right: auto; /* 영역 가운데 정렬 */
+    border: 5px solid #333; /* 보더 : 테두리의 두께 / 솔리드(실선) : 테두리의 종류 */
+    /* border-width: ;
+    border-style: ;
+    border-color: ; */
+    padding: 5px;
+}
+
+/* 제목은 통일해 주는 편이 좋다 */
+h2 {
+    font-size: 1.8em;
+    padding: 15px;
+    border-radius: 3px; /* 테두리가 있어야 효과가 나타난다 */
+    box-shadow: -3px 3px 3px 0px rgb(198, 198, 198); /* 그림자 박스 312p 313p/
+    X좌표 , Y좌표 사각형의 x,y축 좌표는 좌측상단이 0,0자리다 -는 좌x상y, +는우x하y / 3번째는 흐림정도 4번째는 번짐정도*/
+}
+
+h3 {
+    font-size: 1.3em;
+    padding: 15px 0px 15px 10px;
+    border-left: solid pink 8px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 30px; /* 줄간격 */
+    margin: 20px;
+}
+
+dl {
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+dt {
+    font-size: 1.1em;
+    font-weight: bold; /* 글자체 */
+    color: aqua;
+}
+
+article ul {
+    line-height: 30px;
+}
+
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkorchid;
+    width: 80%;
+    padding: 10px;
+    color: white;
+    text-align: center;
 }

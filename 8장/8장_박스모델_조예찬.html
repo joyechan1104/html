@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 레벨 요소와 인라인 레벨 요소 - 조예찬</title>
+
+    <style>
+        /*컨텐츠 크기 알아보기*/
+        /*상자의 크기 (가로100px + padding 좌10px 우10px + border 좌5px 우5px) = 가로 130px*/
+        .content {
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            padding: 10px;
+            border: 5px solid black;
+        }
+
+        /*이미지 블록 요소로 정리*/
+        #block img {
+            display: block;/*세로 정렬*/
+            margin: 10px;
+        }
+        
+        /*메뉴(리스트) 배치 방법*/
+        #list li {
+            background-color: darkorange;
+            margin: 10px;
+            /*기본이 dispiay: block 이다.*/
+            width: 150px;
+            height: 50px;
+        }
+        #inline li {
+            background-color: deepskyblue;
+            margin: 10px;
+            display: inline; 
+            /*장점: 가로 정렬, 단점: 크기(길이) width, height 지정 불가*/
+            width: 150px; /*노 적용*/
+            height: 50px; /*노 적용*/
+        }
+        #inlineBlock li {
+            background-color: goldenrod;
+            margin: 10px;
+            display: inline-block; 
+            /*장점: 가로 정렬 되고, 크기(길이) width, height 지정 가능*/
+            width: 150px;
+            height: 50px;
+        }
+
+        .overlap {
+            width: 100px;
+            height: 100px;
+            margin: 30px; /*블록 요소에서는 마진 숫자가 큰 기준으로 margin overlap 된다.*/
+            padding: 10px;
+            border: 5px solid black;
+            display: inline-block; /*인라인-블록의 경우에는 margin overlap 되지않는다*/
+        }
+
+        .box1, .box2 {
+            width: 300px;
+            height: 150px;
+            margin: 30px;
+            padding: 10px;
+            border: 5px solid black;
+        }
+        .box1 {
+            box-sizing: content-box; /*border, padding 포함 px(기본설정)*/
+            /*가로길이: 300 + 10 + 10 + 5 + 5*/
+        }
+        .box2 {
+            box-sizing: border-box; /*border, padding 불포함 px, width안에 border와 padding이 포함되어 설정된다.*/
+            /*가로길이: 300*/
+        }
+    </style>
+    <!--block: div, p, li(줄전체, 자동줄바뀜)   inline: img, span(크기만큼, 줄안바뀜 br태그 필요)-->
+</head>
+
+<body> <!--299p~303p-->
+    <h1>컨텐츠 크기</h1> 
+    <div class="content" style="background-color: yellow;"></div>
+    <div class="content" style="background-color: yellowgreen;"></div>
+    <div class="content" style="background-color: aqua;"></div>
+    <hr>
+
+    <h1>이미지 인라인 요소로 화면 배치</h1>
+    <div>
+        <img src="images/pic1.jpg">
+        <img src="images/pic2.jpg">
+        <img src="images/pic3.jpg">
+    </div>
+
+    <h1>이미지 블럭 요소로 화면 배치</h1>
+    <div id="block">
+        <img src="images/pic1.jpg">
+        <img src="images/pic2.jpg">
+        <img src="images/pic3.jpg">
+    </div>
+    <hr>
+
+    <h1>메뉴(리스트) 배치 기본 블럭 요소</h1>
+    <ul id="list">
+        <li>학과 소개</li>
+        <li>컴퓨터공학소개</li>
+        <li>메타버스전공</li>
+        <li>교육목표</li>
+        <li>주요교과목</li>
+    </ul>
+
+    <h1>메뉴(리스트) 인라인 배치</h1>
+    <ul id="inline">
+        <li>학과 소개</li>
+        <li>컴퓨터공학소개</li>
+        <li>메타버스전공</li>
+        <li>교육목표</li>
+        <li>주요교과목</li>
+    </ul>
+
+    <h1>메뉴(리스트) 인라인-블록 배치</h1>
+    <ul id="inlineBlock">
+        <li>학과 소개</li>
+        <li>컴퓨터공학소개</li>
+        <li>메타버스전공</li>
+        <li>교육목표</li>
+        <li>주요교과목</li>
+    </ul>
+    <hr>
+
+    <h1>컨텐츠 마진 중첩</h1>
+    <div class="content" style="background-color: yellow;"></div>
+    <div class="content" style="background-color: greenyellow;"></div>
+    <div class="overlap" style="background-color: aqua;"></div>
+    <div class="overlap" style="background-color: purple;"></div>
+    <hr>
+
+    <h1>박스 사이즈 정하기</h1>
+    <div class="box1" style="background-color: deeppink;">content-box</div>
+    <div class="box2" style="background-color: orange;">border-box</div>
+
+</body>
+</html>
