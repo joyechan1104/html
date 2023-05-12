@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10장 시맨틱 태그</title>
+
+    <style>
+        section {
+            border: 2px solid deeppink;
+            margin: 10px; /*마진이 겹쳐져서 위아래 10px이다*/
+            padding: 10px;
+            width: 40%;
+            height: 200px;
+        }
+
+        #s1, #s2 {
+            /*float 지정 /왼쪽을 기준으로 오른쪽도 정렬 단,footer도 떠버린다.*/
+            /*float: left; 지정위치는 누가 코드를 보는것도 아니라서 상관없다.*/
+            float: left; 
+        }
+
+        aside, footer, #s3, #s4, #s5, #s6 {
+            /*float 속성 지우기*/
+            clear: both;
+        }
+
+        #s2 {
+            box-sizing: border-box; /*height 고정 s1 224px = height + padding + border(solid) s2 200px*/
+        }
+    </style>
+</head>
+<body> <!--aside를 제외한 시맨틱 태그는 웬만한 문서에 다 있다.-->
+    <header>
+        <h1>CSS Float 속성과 Clear 속성</h1>
+    </header>
+
+    <nav> <!--하이퍼링크 띄어쓰기 할건지 말건지 정하기, 블록지정해서 마우스로 드래그하면 된다.-->
+        <a href="#s1">[&lt;header&gt;]</a>&nbsp;&nbsp;&nbsp;
+        <a href="#s2">[&lt;nav&gt;]</a>&nbsp;&nbsp;&nbsp;
+        <a href="#s3">[&lt;section&gt;]</a>&nbsp;&nbsp;&nbsp;
+        <a href="#s4">[&lt;article&gt;]</a>&nbsp;&nbsp;&nbsp;
+        <a href="#s5">[&lt;aside&gt;]</a>&nbsp;&nbsp;&nbsp;
+        <a href="#s6">[&lt;footer&gt;]</a>&nbsp;&nbsp;&nbsp;
+    </nav>
+
+    <!-- header 설명 -->
+    <section id="s1">
+        <h2>Header</h2>
+        <article>
+            <ul>
+                <li>패이지나 섹션의 머리말 표현</li>
+                <ol>
+                    <li>페이지 제목</li>
+                    <li>페이지 소개</li>
+                </ol>
+            </ul>
+        </article>
+    </section>
+
+    <!-- nav 설명 -->
+    <section id="s2">
+        <h2>Nav</h2>
+        <article>
+            <ol>
+                <li>하이퍼링크들을 모아 놓은 특별한 섹션</li>
+                <li>페이지 내 목차를 만드는 용도</li>
+            </ol>
+        </article>
+    </section>
+    
+    <!-- section 설명 -->
+    <section id="s3">
+        <h2>Section</h2>
+        <article>
+            <ul>
+                <li>문서의 장(chapter, section) 혹은 절을 구성하는 역할</li>
+                <li>일반 문서에 여러 장이 있듯이 웹 페이지에 여러 section 기능</li>
+                <li>제목 태그를 사용하여 절 혹은 섹션의 주제 기입</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- article 설명 -->
+    <section id="s4">
+        <h2>Article</h2>
+        <article>
+            <ul>
+                <li>본문과 연관 있지만 독립적인 콘텐츠를 담는 영역</li>
+                <li>혹은 보조기사. 블로그 포스트, 댓글 등 기타 독립적인 내용</li>
+                <li>article에 담는 내용이 많은 경우 여러 section에 둘 수 있음</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- aside 설명 -->
+    <section id="s5">
+        <h2>Aside</h2>
+        <article>
+            <ul>
+                <li>본문에서 약간 벗어난 노트나 팁</li>
+                <li>신문, 잡지에서 주요 기사 옆 관련 기사, 삽입 어구로 표시된 논평 등</li>
+                <li>페이지의 오른쪽이나 왼쪽에 주로 배치</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- footer 설명 -->
+    <section id="s6">
+        <h2>Footer</h2>
+        <article>
+            <ul>
+                <li>꼬리말 영역, 주로 저자나 저작권 정보 표시</li>
+            </ul>
+        </article>
+    </section>
+
+    <aside></aside>
+
+    <footer>
+        &copy;<!--☆저작권 표시☆--> 신라대학교 컴퓨터공학부 웹제작 수업 자료
+    </footer>
+</body>
+</html>
