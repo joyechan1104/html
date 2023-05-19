@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자3 - 조예찬</title>
+
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block; /*인라인과 인라인 블록의 차이 시험에 나옴*/
+            width: 120px;
+            margin: 10px;
+        }
+
+        li > a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            padding: 5px 20px;
+        }
+
+        .flat {
+            background-color: blue;
+            color: white;
+        }
+
+        [class ~= "button"] { /* ~ 클래스에 button이란게 포함되어 있으면 */
+            border: 2px solid black;
+            box-shadow: gray 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">메뉴 1</a></li>
+        <li><a href="#">메뉴 2</a></li>
+        <li><a href="#" class="button">메뉴 3</a></li>
+        <li><a href="#" class="flat button">메뉴 4</a></li>
+    </ul>
+</body>
+</html>
