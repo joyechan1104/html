@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 3 - 조예찬</title>
+
+    <style>
+        .origin {
+            width: 210px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 40px;
+            float: left;
+        }
+
+        .rotate1:hover /*hover : 마우스를 올리면*/ {
+            -webkit-transform: rotate(20deg); /*다른 브라우저도 적용되게*/
+            -ms-transform: rotate(20deg);
+            -moz-transform: rotate(20deg);
+            -o-transform: rotate(20deg);
+            transform: rotate(20deg); /*시계방향 20도*/
+        }
+        .rotate2:hover /*hover : 마우스를 올리면*/ {
+            -webkit-transform: rotate(-40deg); /*다른 브라우저도 적용되게*/
+            -ms-transform: rotate(-40deg);
+            -moz-transform: rotate(-40deg);
+            -o-transform: rotate(-40deg);
+            transform: rotate(-40deg); /*반시계방향 40도*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="origin">
+        <div class="rotate1">
+            <img src="images/fruit.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="rotate2">
+            <img src="images/fruit.jpg">
+        </div>
+    </div>
+</body>
+</html>

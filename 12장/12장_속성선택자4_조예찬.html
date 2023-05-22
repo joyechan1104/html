@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자4 - 조예찬</title>
+
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block; /*인라인과 인라인 블록의 차이 시험에 나옴*/
+            width: 120px;
+            margin: 10px;
+        }
+
+        li > a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            padding: 5px 20px;
+        }
+
+        a[title |= "us"] { /*title에 us가 포함된거요*/
+            background: url(imeges/us.png) no-repeat center right;
+            padding: 5px 25px;
+            background-color: yellowgreen;
+        }
+        a[title |= "jap"] /*title에 jap가 포함된거요 ~=는 여러개의 클래스중 있으면 하라, |=은 단어혼자 쓰여있거나 -기호가 포함되어 있으면 */ 
+        {
+            background: url(imeges/jp.png) no-repeat left center;
+            padding: 5px 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>외국어 서비스 : </li>
+        <li><a href="#" title="us">영어</a></li>
+        <li><a href="#" title="us-english">영어</a></li>
+        <li><a href="#" title="jap-anese">일본어</a></li>
+    </ul>
+</body>
+</html>

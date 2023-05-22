@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 2 - 조예찬</title>
+
+    <style>
+        .origin {
+            width: 210px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 40px;
+            float: left;
+        }
+
+        .scalex:hover /*hover : 마우스를 올리면*/ {
+            -webkit-transform: scaleX(1.2); /*다른 브라우저도 적용되게*/
+            -ms-transform: scaleX(1.2);
+            -moz-transform: scaleX(1.2);
+            -o-transform: scaleX(1.2);
+            transform: scaleX(1.2); /*가로 사이즈 1.2배*/
+        }
+        .scaley:hover /*hover : 마우스를 올리면*/ {
+            -webkit-transform: scaleY(1.5); /*다른 브라우저도 적용되게*/
+            -ms-transform: scaleY(1.5);
+            -moz-transform: scaleY(1.5);
+            -o-transform: scaleY(1.5);
+            transform: scaleY(1.5); /*세로 사이즈 1.5배*/
+        }
+        .scale:hover /*hover : 마우스를 올리면*/ {
+            -webkit-transform: scale(0.7); /*다른 브라우저도 적용되게*/
+            -ms-transform: scale(0.7);
+            -moz-transform: scale(0.7);
+            -o-transform: scale(0.7);
+            transform: scale(0.7); /*전체 사이즈 0.7배*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="origin">
+        <div class="scalex">
+            <img src="images/fruit.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="scaley">
+            <img src="images/fruit.jpg">
+        </div>
+    </div>
+    <div class="origin">
+        <div class="scale">
+            <img src="images/fruit.jpg">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자6 - 조예찬</title>
+
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline-block; /*인라인과 인라인 블록의 차이 시험에 나옴*/
+            width: 120px;
+            margin: 10px;
+        }
+
+        li > a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            padding: 5px 20px;
+        }
+
+        .flat {
+            background-color: blue;
+            color: white;
+        }
+
+        a[href $= "hwp"] /*이 단어로 끝나는*/ {
+            background: url(imeges/hwp_icon.gif) no-repeat left center;
+            padding: 5px 25px;
+        }
+
+        a[href $= "xlsx"] {
+            background: url(imeges/excel_icon.gif) no-repeat left center;
+            padding: 5px 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <h2>학과 소개 파일 다운로드</h2>
+        <li><a href="info.hwp">한글</a></li>
+        <li><a href="info.xlsx">엑셀</a></li>
+    </ul>
+</body>
+</html>
