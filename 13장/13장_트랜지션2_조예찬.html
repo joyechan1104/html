@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition 2 - 조예찬</title>
+
+    <style>
+        .tr1 {
+            width: 100px;
+            height: 100px;
+            margin: 30px;
+            background-color: greenyellow;
+            transition-property: width, height; /*트랜지션 속성*/
+            transition-duration: 2s, 3s; /*속도 width, height*/
+        }
+
+        .tr1:hover {
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tr1"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition 1 - 조예찬</title>
+
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin: 30px;
+        }
+
+        .bg-tr {
+            background-color: orange; /*기본색*/
+            transition: all ease 2s; /*ease 천천히 -> 빨리 -> 천천히*/
+        }
+        .bg-tr:hover {
+            background-color: chartreuse; /*호버시 색깔*/
+        }
+        .border-tr {
+            background-color: deeppink;
+            border: 3px solid black;
+            transition: all linear 1.5s; /*linear 처음부터 끝까지 일정한 속도로*/
+        }
+        .border-tr:hover {
+            border: 3px solid red;
+            border-radius: 50%; /*동그라미로*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-tr"></div>
+    <div class="border-tr"></div>
+</body>
+</html>

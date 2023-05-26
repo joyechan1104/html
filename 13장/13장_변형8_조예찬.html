@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 8 - 조예찬</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .container {
+            border: 1px solid black;
+            float: left;
+            perspective: 300px;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+
+        .box1 {
+            background-color: aqua;
+            -webkit-transform: rotateY(135deg);
+            -ms-transform: rotateY(135deg);
+            -moz-transform: rotateY(135deg);
+            -o-transform: rotateY(135deg);
+            transform: rotateY(135deg);
+        }
+
+        #back1 {
+            backface-visibility: hidden; /*뒷면을 안보이게*/
+        }
+        #back2 {
+            backface-visibility: visible; /*뒷면을 보이게(변화없음)*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1" id="back1">
+            <h1>back</h1>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="box1" id="back2">
+            <h1>back</h1>
+        </div>
+    </div>
+</body>
+</html>
