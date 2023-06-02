@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 3 - 조예찬</title>
+
+    <style>
+        #box1 {
+            height: 60px;
+            margin-top: 50px;
+            margin-left: 100px;
+            padding: 20px;
+            animation-name: moving;
+            animation-duration: 3s;
+            animation-direction: normal; /*normal 기본값 / 477p 애니메이션 방향 지정하기*/
+            animation-iteration-count: infinite; /*반복횟수: infinite 무한박복 / 횟수 입력 유한 반복*/
+        }
+
+        @keyframes moving
+        {
+            from {
+                width: 200px;
+                background-color: rgb(255, 212, 196); /*색깔을 연하게 해서 원근감*/
+                transform: scale(0.5) rotate(15deg); /*크기, 각도*/
+                opacity: 0.5; /*투명도*/
+            }
+            to {
+                width: 400px;
+                background-color: coral;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <h3>CSS3 animation</h3>
+    </div>
+</body>
+</html>

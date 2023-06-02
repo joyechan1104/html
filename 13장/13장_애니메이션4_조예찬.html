@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 4 - 조예찬</title>
+
+    <style>
+        #box1 {
+            height: 100px;
+            width: 100px;
+            margin-top: 50px;
+            margin-left: 100px;
+            padding: 20px;
+            animation-name: rotate;
+            animation-duration: 3s;
+            animation-direction: normal; /*normal 기본값 / 477p 애니메이션 방향 지정하기*/
+            animation-iteration-count: infinite; /*반복횟수: infinite 무한박복 / 횟수 입력 유한 반복*/
+        }
+
+        @keyframes rotate
+        {
+            from {
+                background-color: yellow; /*색깔을 연하게 해서 원근감*/
+                transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            }
+            50% { /*중간 과정을 추가 동시에 xy축이 작동되면 오류가 생긴다. 한번x 한번y*/
+                background-color: yellowgreen;
+                transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+            }
+            to {
+                background-color: coral;
+                transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+</body>
+</html>
